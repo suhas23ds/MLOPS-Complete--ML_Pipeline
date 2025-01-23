@@ -10,7 +10,7 @@ Setting up dcv pipeline (without params)
 7> Now git add, commit, push
 
 Setting up dcv pipeline (with params)
-8> add params.yaml file
+8> add params.yaml file with parameters.
 9> Add the params setup (mentioned below)
 10> Do "dvc repro" again to test the pipeline along with the params
 11> Now git add, commit, push
@@ -75,7 +75,7 @@ dvclive code block:
 1> import dvclive and yaml:
 from dvclive import Live
 import yaml
-2> Add the load_params function and initiate "params" var in main
+2> Add the load_params function and initiate "params" var in main--to read the param file
 3> Add below code block to main:
 with Live(save_dvc_exp=True) as live:
     live.log_metric('accuracy', accuracy_score(y_test, y_test))
